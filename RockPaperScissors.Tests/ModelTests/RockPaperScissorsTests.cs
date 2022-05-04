@@ -7,7 +7,7 @@ namespace RockPaperScissors.Tests
   public class GameTests
   {
   [TestMethod]
-    public void RunGameTest_ShouldReturnInputInformation_Rock()
+    public void ReturnUserOneInput_ShouldReturnInputInformation_Rock()
     {
       string userOneInput = "rock";
       string userTwoInput = "paper";
@@ -15,5 +15,33 @@ namespace RockPaperScissors.Tests
       // any necessary logic to prep for test; instantiating new classes, etc.
       Assert.AreEqual("rock", newGame.ReturnUserOne());
     }
+
+    [TestMethod]
+    public void RunGame_ShouldReturnDraw_Rock()
+    {
+      string userOneInput = "rock";
+      string userTwoInput = "rock";
+      Game newGame = new Game(userOneInput, userTwoInput);
+      Assert.AreEqual("This Is A Draw!", newGame.RunGame());
+    }
+
+    [TestMethod]
+    public void RunGame_ShouldReturnPlayerOneWins_Rock()
+    {
+      string userOneInput = "rock";
+      string userTwoInput = "scissors";
+      Game newGame = new Game(userOneInput, userTwoInput);
+      Assert.AreEqual("Player 1 Wins!", newGame.RunGame());
+    }
+
+    [TestMethod]
+    public void RunGame_ShouldReturnPlayerTwoWins_Rock()
+    {
+      string userOneInput = "rock";
+      string userTwoInput = "paper";
+      Game newGame = new Game(userOneInput, userTwoInput);
+      Assert.AreEqual("Player 2 Wins!", newGame.RunGame());
+    }
+
   }
 }

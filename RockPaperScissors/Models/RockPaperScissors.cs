@@ -1,4 +1,4 @@
-public class Game 
+public class Game
 {
   // private fields
   private string _userOneInput;
@@ -14,17 +14,37 @@ public class Game
   {
     return _userOneInput;
   }
+
+  public string RunGame()
+  {
+    if (_userOneInput == "rock" && _userTwoInput == "rock")
+    {
+      return "This Is A Draw!";
+    }
+    else if (_userOneInput == "rock" && _userTwoInput == "scissors")
+    {
+      return "Player 1 Wins!";
+    }
+    else if (_userOneInput == "rock" && _userTwoInput == "paper")
+    {
+      return "Player 2 Wins!";
+    }
+    else
+    {
+      return "enter rock, paper, or scissors";
+    }
+  }
 }
 
-// if (_userOneInput == "rock" && _userTwoInput == "rock")
+// if (_userOneInput == "paper" && _userTwoInput == "paper")
 // {
-//   return "This Is A Draw";
+//   return "This Is A Draw!";
 // }
-// else if (_userOneInput == "rock" && _userTwoInput == "scissors")
+// else if (_userOneInput == "paper" && _userTwoInput == "rock")
 // {
-//   return "Player 1 Wins!";
+//   return "This is a Draw!";
 // }
-// else if (_userOneInput == "rock" && _userTwoInput == "paper")
+// else if (_userOneInput == "paper" && _userTwoInput == "scissors")
 // {
 //   return "Player 2 Wins!";
 // }
