@@ -41,9 +41,21 @@ public class Game
     {
       return "Player 2 Wins!";
     }
+    else if (_userOneInput == "scissors" && _userTwoInput == "scissors")
+    {
+      return "This Is A Draw!";
+    }
+    else if (_userOneInput == "scissors" && _userTwoInput == "paper")
+    {
+      return "Player 1 Wins!";
+    }
+    else if (_userOneInput == "scissors" && _userTwoInput == "rock")
+    {
+      return "Player 2 Wins!";
+    }
     else
     {
-      return "enter rock, paper, or scissors";
+      return "please enter rock, paper, or scissors";
     }
   }
 }
