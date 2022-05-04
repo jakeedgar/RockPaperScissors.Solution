@@ -21,7 +21,7 @@ namespace RockPaperScissors.Tests
     {
       string userOneInput = "rock";
       string userTwoInput = "rock";
-      Game newGame = new Game(userOneInput, userTwoInput);
+      Game newGame = new Game(userOneInput, userTwoInput);      
       Assert.AreEqual("This Is A Draw!", newGame.RunGame());
     }
 
