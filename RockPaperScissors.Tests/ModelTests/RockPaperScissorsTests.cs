@@ -43,5 +43,33 @@ namespace RockPaperScissors.Tests
       Assert.AreEqual("Player 2 Wins!", newGame.RunGame());
     }
 
+    [TestMethod]
+    public void RunGame_ShouldReturnDraw_Paper()
+    {
+      string userOneInput = "paper";
+      string userTwoInput = "paper";
+      Game newGame = new Game(userOneInput, userTwoInput);
+      Assert.AreEqual("This Is A Draw!", newGame.RunGame());
+    }
+
+    [TestMethod]
+    public void RunGame_ShouldReturnPlayerOneWins_Paper()
+    {
+      string userOneInput = "paper";
+      string userTwoInput = "rock";
+      Game newGame = new Game(userOneInput, userTwoInput);
+      Assert.AreEqual("Player 1 Wins!", newGame.RunGame());
+    }
+
+    [TestMethod]
+    public void RunGame_ShouldReturnPlayerTwoWins_Paper()
+    {
+      string userOneInput = "paper";
+      string userTwoInput = "scissors";
+      Game newGame = new Game(userOneInput, userTwoInput);
+      Assert.AreEqual("Player 2 Wins!", newGame.RunGame());
+    }
+
+
   }
 }

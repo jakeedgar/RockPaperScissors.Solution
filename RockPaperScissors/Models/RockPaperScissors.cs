@@ -29,22 +29,21 @@ public class Game
     {
       return "Player 2 Wins!";
     }
+    else if (_userOneInput == "paper" && _userTwoInput == "paper")
+    {
+      return "This Is A Draw!";
+    }
+    else if (_userOneInput == "paper" && _userTwoInput == "rock")
+    {
+      return "Player 1 Wins!";
+    }
+    else if (_userOneInput == "paper" && _userTwoInput == "scissors")
+    {
+      return "Player 2 Wins!";
+    }
     else
     {
       return "enter rock, paper, or scissors";
     }
   }
 }
-
-// if (_userOneInput == "paper" && _userTwoInput == "paper")
-// {
-//   return "This Is A Draw!";
-// }
-// else if (_userOneInput == "paper" && _userTwoInput == "rock")
-// {
-//   return "This is a Draw!";
-// }
-// else if (_userOneInput == "paper" && _userTwoInput == "scissors")
-// {
-//   return "Player 2 Wins!";
-// }
